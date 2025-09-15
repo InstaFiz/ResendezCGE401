@@ -1,0 +1,48 @@
+﻿/*
+ * Jesse Resendez
+ * Assignment 2
+ * Makes objects spawn at random intervals and at random positions
+ */
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnManager : MonoBehaviour
+{
+    public GameObject[] prefabsToSpawn;
+    private float leftBound = -14;
+    private float rightBound = 14;
+    private float spawnPosZ = 20;
+    public bool gameOver = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //StartCoroutine(SpawnRandomPrefabWithCoroutine());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    void SpawnRandomPrefab()
+    {
+        int prefabIndex = Random.Range(0, prefabsToSpawn.Length);
+        Vector3 spawnPos = new Vector3(Random.Range(leftBound, rightBound), 0, spawnPosZ);
+        Instantiate(prefabsToSpawn[prefabIndex], spawnPos, prefabsToSpawn[prefabIndex].transform.rotation);
+    }
+
+    IEnumerator SpawnRandomPrefabWithCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+
+        while (!gameOver)
+        {
+            SpawnRandomPrefab();
+            yield return new WaitForSeconds(1.5f);
+        }
+    }
+}

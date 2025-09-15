@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Jesse Resendez
+ * Assignment 2
+ * Makes objects move forward
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

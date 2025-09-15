@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Jesse Resendez
+ * Assignment 2
+ * Allows an object to be fired as a projectile
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,8 +22,8 @@ public class ShootPrefab : MonoBehaviour
     	void Update()
     	{
         	if (Input.GetKeyDown(KeyCode.Space))
-		{
-			Instantiate(prefabToShoot, transform.position, prefabToShoot.transform.rotation);
-		}
+		    {
+			    Instantiate(prefabToShoot, transform.position, prefabToShoot.transform.rotation);
+		    }
     	}
 }

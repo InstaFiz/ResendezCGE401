@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Jesse Resendez
+ * Assignment 2
+ * Allows you to control the player character
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
