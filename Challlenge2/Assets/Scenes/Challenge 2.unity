@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44634527, g: 0.49101967, b: 0.5470841, a: 1}
+  m_IndirectSpecularColor: {r: 0.4463446, g: 0.4910189, b: 0.5470826, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1229,9 +1229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefabs:
-  - {fileID: 8241448880393145375, guid: 3e5fe95e580114a5f8f8348678e77463, type: 3}
-  - {fileID: 8241448880393145375, guid: 3e5fe95e580114a5f8f8348678e77463, type: 3}
-  - {fileID: 8241448880393145375, guid: 3e5fe95e580114a5f8f8348678e77463, type: 3}
+  - {fileID: 2178073922435996824, guid: 1d143480adadf43389395930eee2b5cf, type: 3}
+  - {fileID: 4524317531697499709, guid: a325bcb65fd94414191d0ddc2514e2dc, type: 3}
+  - {fileID: 7945815000853930370, guid: fc41e6839a5494e0cbaea5f0081c271d, type: 3}
 --- !u!1 &1025854373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,8 +1556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6, y: 2.9}
-  m_SizeDelta: {x: 1208.7631, y: 534.2639}
+  m_AnchoredPosition: {x: 2.9, y: 0.8}
+  m_SizeDelta: {x: 772.60596, y: 344.5697}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591300875
 MonoBehaviour:
