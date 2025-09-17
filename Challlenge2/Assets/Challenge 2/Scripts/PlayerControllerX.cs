@@ -5,18 +5,23 @@ using UnityEngine;
 public class PlayerControllerX : MonoBehaviour
 {
     public GameObject dogPrefab;
-    float cooldown = 1f;
+    bool cooldown = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (cooldown < 1f)
-
-
         // On spacebar press, send dog
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !cooldown)
         {
+            StartCoroutine(sendDaDog());
+        }
+
+        IEnumerator sendDaDog()
+        {
+            cooldown = true;
             Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
+            yield return new WaitForSeconds(1f);
+            cooldown = false;
         }
     }
 }

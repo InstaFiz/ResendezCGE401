@@ -10,15 +10,16 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public HealthSystem healthSystem;
     public GameObject[] prefabsToSpawn;
     private float leftBound = -14;
     private float rightBound = 14;
     private float spawnPosZ = 20;
-    public bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        healthSystem = GameObject.FindGameObjectWithTag("HealthSystem").GetComponent<HealthSystem>();
         StartCoroutine(SpawnRandomPrefabWithCoroutine());
     }
 
@@ -39,7 +40,7 @@ public class SpawnManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
 
-        while (!gameOver)
+        while (!healthSystem.gameOver)
         {
             SpawnRandomPrefab();
             yield return new WaitForSeconds(1.5f);
