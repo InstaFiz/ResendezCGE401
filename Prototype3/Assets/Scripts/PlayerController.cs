@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Jesse Resendez
+ * Assignment 4
+ * Allows the player to be controlled.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +22,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityModifier;
+
+        if (Physics.gravity.y > -10)
+        {
+            Physics.gravity *= gravityModifier;
+        }
     }
 
     // Update is called once per frame
@@ -26,6 +36,19 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, jumpForceMode);
             isOnGround = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") && !gameOver)
+        {
+            isOnGround = true;
+        }
+        else if (collision.gameObject.CompareTag("Obstacle") && !gameOver)
+        {
+            Debug.Log("Game Over!");
+            gameOver = true;
         }
     }
 }
